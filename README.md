@@ -49,6 +49,12 @@ File untuk penyelesaian soal ini ada disini : [Source Code Soal 3]()
 ![]()
 
 # Soal 4 - Norland The Explorer!
+Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. \
+***a.*** Emerald = buatlah matriks (4x2) dan (2x5) serta tampilkan hasil hasil perkalian matriks tersebut. \
+***b.*** Amethyst = tampilkan matriks hasil perkalian dari batu Emerald dan buatlah matriks jumlah nilai faktorial dari setiap angka dalam matriks tersebut. \
+***c.*** Onyx = hitunglaj jumlah file yang ada dalam direktori tersebut. \
+
+Bantu Norland menyelesaikan teka-teki dari setiap batu pada pilar yang ia temukan!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 4](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%204)
 
