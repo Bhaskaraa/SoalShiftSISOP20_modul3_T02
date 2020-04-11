@@ -371,4 +371,4 @@ int main()
 ***2.*** Soal jauh diatas kemampuan penulis terutama nomor 1. \
 ***3.*** Banyak command baru yang penulis belum pernah dengar maupun gunakan sebelumnya. \
 ***4.*** Penulis belum memahami dengan penuh yang diberikan pada modul 3. \
-***5.*** Karena keadaan yang WFH, penulis sulit berdiskusi dengan anggota kelompok. \
+***5.*** Karena keadaan yang WFH, penulis sulit berdiskusi dengan anggota kelompok. 
