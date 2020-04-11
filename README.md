@@ -291,7 +291,7 @@ int main(){
 #include <string.h>
 #include <sys/wait.h>
 ```
-- ssss
+- Source code diatas merupakan library yang digunakan untuk menyelesaikan soal nomor 4c.
 ```
 int main()
 {
@@ -303,7 +303,8 @@ int main()
         exit(1);
     }
 ```
-- ljn
+- `int fd1[2]` mendeklarasikan variabel ***fd1*** bertipe integer dan membuat dua ujung pipe (read and write).
+- `pid_t p` mendeklarasikan variabel ***p*** untuk menyimpa parent ID.
 ```
     p = fork();
     //Kondisi jika proses anak gagal
@@ -311,7 +312,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 ```
-- l
+- Source code diatas merupakan kondisi jika gagal membuat proses anak.
 ```
     else if (p > 0){
         //selesai menulis
@@ -323,7 +324,10 @@ int main()
         execlp("ls","ls",NULL);
     }
 ```
-- mk
+- `close(1)` berfungsi untuk close writting atau stop menulis.
+- `dup(fd1[1])` berfungsi untuk menulis.
+- `close(fd1[0])` berfungsi untuk close reading atau stop membaca.
+- `execlp("ls","ls",NULL)` menjalankan fungsi listing.
 ```
     else{
         //close reading
@@ -336,7 +340,10 @@ int main()
     }
 }
 ```
-- klakns
+- `close(0)` berfungsi untuk stop membaca.
+- `dup(fd1[0])` fungsi reading dilakukan.
+- `close(fd1[1])` berfunsi untuk close writting atau stop menulis.
+- `execlp("wc","wc", "-l", NULL)` untuk keluar dari pipe dan menuliskan hasil listing.
 
 ## Dokumentasi Penyelesaian Soal 4c
 ![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4c.png)
