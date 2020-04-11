@@ -115,7 +115,8 @@ int main(){
 		pthread_join((tid[a]), NULL);
 	}
 ```
-- lj
+- `pthread_create` diatas berfungsi untuk membuat thread untuk menjalankan fungsi ***multiply*** dengan parameter variabel a.
+- `pthread_join` diatas berfungsi untuk join dengan thread yang telah dibuat sebelumnya dan menampilkan hasilnya.
 ```
   printf("Hasil perkalian matriks A dan B :\n");
   for (int a = 0; a < 4; a++) {
@@ -138,7 +139,10 @@ int main(){
     exit(1);
   }
 ```
-- jkbk
+- `shmkey` adalah Shared Memory Key.
+- `shmid` adalah Shared Memory ID.
+- `shmptr` adalah pointer struct yang akan di passing.
+- `shmkey = ftok("key",50)` untuk menetepkan ukuran key yang sama di semua proses yakni 50 bit.
 ```
   shmptr = (struct bagi *) shmat(shmid, NULL, 0);
   shmptr->status = BELUM_SIAP;
@@ -150,7 +154,8 @@ int main(){
     c++;
   }
 ```
-- kmpk
+- `shmptr = (struct bagi *) shmat(shmid, NULL, 0)` shmptr menunjuk ke struct bagi dan melampirkan segmen Shared Memory.
+- `shmptr->data[a] = mks3[b][c` shmptr dipassing dengan parameter variabel a ke matriks 3.
 ```
     shmptr->status = SIAP;
 
@@ -233,7 +238,10 @@ int main(){
 		exit(1);
 	}
 ```
-- dsads
+- `shmkey` adalah Shared Memory Key.
+- `shmid` adalah Shared Memory ID.
+- `shmptr` adalah pointer struct yang akan di passing.
+- `shmkey = ftok("key",50)` untuk menetepkan ukuran key yang sama di semua proses yakni 50 bit.
 ```
 	ShmPTR = (struct bagi*) shmat(shmid, NULL, 0);
 	while (shmptr->status != SIAP)
