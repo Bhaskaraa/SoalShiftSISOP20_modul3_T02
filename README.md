@@ -51,9 +51,9 @@ File untuk penyelesaian soal ini ada disini : [Source Code Soal 3](https://githu
 # Soal 4 - Norland The Explorer!
 Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. 
 
-***a.*** Emerald = buatlah matriks (4x2) dan (2x5) serta tampilkan hasil hasil perkalian matriks tersebut. \
-***b.*** Amethyst = tampilkan matriks hasil perkalian dari batu Emerald dan buatlah matriks jumlah nilai faktorial dari setiap angka dalam matriks tersebut. \
-***c.*** Onyx = hitunglah jumlah file yang ada dalam direktori tersebut. \
+***a.*** Emerald = buatlah matriks (4x2) dan (2x5) serta tampilkan hasil hasil perkalian matriks tersebut. (menggunakan shared memory) \
+***b.*** Amethyst = tampilkan matriks hasil perkalian dari batu Emerald dan buatlah matriks jumlah nilai faktorial dari setiap angka dalam matriks tersebut. (menggunakan thread) \
+***c.*** Onyx = hitunglah jumlah file yang ada dalam direktori tersebut. (menggunakan pipe)
 
 Bantu Norland menyelesaikan teka-teki dari setiap batu yang ia temukan!
 
@@ -75,14 +75,15 @@ File untuk penyelesaian soal ini ada disini : [Source Code Soal 4](https://githu
 #define TERAMBIL 1
 #define MAX 50
 ```
-- ljbjk
+- Source code diatas merupakan library yang digunakan untuk penyelesaian soal 4a. 
+- Terdapat tiga ***define*** untuk status, dimana jika nilainya ***-1*** maka statusnya adalah ***BELUM_SIAP***, jika nilainya ***0*** maka statusnya adalahnya ***SIAP***, dan jika nilainya ***1*** maka statusnya adalah ***TERAMBIL***.
 ```
 struct bagi{
     int status;
     int data[50];
   };
 ```
-- lkln
+- Source code diatas berfungsi untuk membuat variabel ***struct*** dengan nama ***bagi***, dimana di dalamnya mendeklarasikan variabel status bertipe integer dan data bertipe integer dengan ukuran 50 bit.
 ```
     int mks1[4][2] = {{1, 1}, {2, 1}, {2, 1}, {1, 2}};
     int mks2[2][5] = {{1, 2, 1, 1, 1}, {1, 1, 2, 1, 1}};
@@ -90,7 +91,7 @@ struct bagi{
     int a,b,c;
     int line = 0;
 ```
-- lkn
+- Source code diatas berfungsi untuk mendeklarasikan matriks 1 yang berukuran ***(4x2)*** dengan isinya seperti diatas, matriks 2 yang berukuran ***(2x5)*** dengan isinya seperti diatas, dan matriks 3 dengan ukutan ***(4x5)*** yang merupakan matriks hasil kali matriks 1 dan 2. Kemudian deklarasi variabel a, b, c, dan line yang bertipe integer.
 ```
 void* multiply(void* arg){
     int a = line++;
@@ -101,7 +102,7 @@ void* multiply(void* arg){
   }
 }
 ```
-- ljb
+- Source code diatas merupakan fungsi untuk mengalikan matriks 1 dan 2.
 ```
 int main(){
 
@@ -124,7 +125,7 @@ int main(){
   printf("\n");
 }
 ```
-- kk
+- Source diatas berfungsi untuk menampilkan hasil kali matriks 1 dan 2 yang merupakan berbentuk matriks 3 dengan ukuran (4x5).
 ```
   key_t shmkey;
   int shmid;
@@ -163,7 +164,9 @@ int main(){
     return 0;
   }
   ```
-- kn
+- `while (shmptr->status != TERAMBIL)` berarti server menunggu client di terminal baru.
+- `shmdt((void *) shmptr)` untuk mendeteksi apakah proses anak telah selesai.
+- `shmctl(shmid, IPC_RMID, NULL)` berarti server telah melepas shared memory dan telah dihapus.
 
 ## Dokumentasi Penyelesaian Soal 4a
 ![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4a.png)
@@ -184,7 +187,8 @@ int main(){
 #define TERAMBIL 1
 #define MAX 50
 ```
-- js
+- Source code diatas merupakan library yang digunakan untuk menyelesaikan soal 4b. 
+- Terdapat tiga ***define*** untuk status, dimana jika nilainya ***-1*** maka statusnya adalah ***BELUM_SIAP***, jika nilainya ***0*** maka statusnya adalahnya ***SIAP***, dan jika nilainya ***1*** maka statusnya adalah ***TERAMBIL***.
 ```
 typedef long long banyak;
 struct bagi{
@@ -195,7 +199,9 @@ struct bagi{
     int row = 0;
     int mks3[4][5];
 ```
-- dDXA
+- `typedef long long banyak` mendefinisikan variabel *banyak* bertipe *long long*.
+- Kemdian membuat variabel ***struct*** dengan nama ***bagi***, dimana di dalamnya mendeklarasikan variabel status bertipe integer dan data bertipe integer dengan ukuran 50 bit.
+- Kemudian mendeklarasikan variabel line, row, mks3 bertipe integer dan matriks 3 berukuran (4x5).
 ```
 void* factorial(void* arg){
 	int a = *((int*)arg);
@@ -212,32 +218,31 @@ void* factorial(void* arg){
 	row++;
 }
 ```
-- asda
+- Source code diatas merupakan fungsi untuk menghitung jumlah faktorial dari variabel yang ada di matriks 3.
 ```
 int main(){
 
-	key_t ShmKEY;
-	int ShmID;
-	struct bagi *ShmPTR;
+	key_t shmkey;
+	int shmid;
+	struct bagi *shmptr;
 
-	ShmKEY = ftok("key",50);
-	ShmID = shmget(ShmKEY,sizeof(struct bagi),0666);
-	if(ShmID < 0){
+	shmkey = ftok("key",50);
+	shmid = shmget(shmkey,sizeof(struct bagi),0666);
+	if(shmid < 0){
 		printf(" ERROR \n");
 		exit(1);
 	}
 ```
 - dsads
 ```
-  //Jika attachment berhasil
-	ShmPTR = (struct bagi*) shmat(ShmID, NULL, 0);
-	while (ShmPTR->status != SIAP)
+	ShmPTR = (struct bagi*) shmat(shmid, NULL, 0);
+	while (shmptr->status != SIAP)
 	;
 ```
-- das
+- Source code diatas adalah kondisi ketika ***attachment*** berhasil.
 ```
 	printf("Matriks (C) hasil perkalian A dan B adalah sebagai berikut : \n");
-		memcpy(mks3, &ShmPTR->data, 50 * sizeof(int));
+		memcpy(mks3, &shmptr->data, 50 * sizeof(int));
 		for(int b=0; b<4; b++){
 			for(int c=0; c<5; c++){
       		printf("%4d", mks3[b][c]);
@@ -245,7 +250,7 @@ int main(){
 		printf("\n");
 		}
 ```
-- jlbj
+- Source diatas adalah fungsi untuk menampilkan matriks 3. `memcpy(mks3, &shmptr->data, 50 * sizeof(int)` merupakan memori yang berisi matriks 3 yang disimpan dari soal 4a.
 ```
 	printf("Jumlah faktorial dari variabel matriks C : \n");
 	pthread_t tid[20];
@@ -256,21 +261,23 @@ int main(){
 			exit(1);
 		}
 
-		*x = ShmPTR->data[a];
+		*x = shmptr->data[a];
 		pthread_create(&(tid[a]), NULL, &factorial, x);
 		pthread_join(tid[a], NULL);
 	}
 ```
-- lkj
+- Source code diatas merupakan fungsi untuk membuat dan menampilkan matriks keempat yang berisi jumlah nilai faktorial dari variabel yang ada di matriks 3. 
+- `int *x =  malloc(sizeof(*x)` merupakan ukuran dari matriks 4 yang diambil dari ukuran matriks 3. `if( x == NULL)` jika nilai variabel ***x*** bernilai NULL atau kosong, output yang dihasilkan adalah ***TIDAK BISA MEMBUAT RUANG***.
 ```
 	ShmPTR->status = TERAMBIL;
-	shmdt((void *) ShmPTR);
+	shmdt((void *) shmptr);
 	printf("\n");
 
 	return 0;
 }
 ```
-- jb
+- `ShmPTR->status = TERAMBIL` server sedang menunggu client di terminal baru.
+- `shmdt((void *) shmptr)` berfungsi untuk mendeteksi apakah proses anak telah selesai.
 
 ## Dokumentasi Penyelesaian Soal 4b
 ![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4b.png)
