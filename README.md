@@ -46,7 +46,7 @@ File untuk penyelesaian soal ini ada disini : [Source Code Soal 2](https://githu
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 3](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%203)
 
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 3.
-![]()
+![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/3.jpg)
 
 # Soal 4 - Norland The Explorer!
 Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. 
@@ -83,7 +83,7 @@ struct bagi{
     int data[50];
   };
 ```
-- Source code diatas berfungsi untuk membuat variabel ***struct*** dengan nama ***bagi***, dimana di dalamnya mendeklarasikan variabel status bertipe integer dan data bertipe integer dengan ukuran 50 bit.
+- Source code diatas berfungsi untuk membuat variabel ***bagi*** bertipe ***struct***, dimana di dalamnya mendeklarasikan variabel ***status*** bertipe integer dan ***data*** bertipe integer dengan ukuran 50 bit.
 ```
     int mks1[4][2] = {{1, 1}, {2, 1}, {2, 1}, {1, 2}};
     int mks2[2][5] = {{1, 2, 1, 1, 1}, {1, 1, 2, 1, 1}};
@@ -91,7 +91,7 @@ struct bagi{
     int a,b,c;
     int line = 0;
 ```
-- Source code diatas berfungsi untuk mendeklarasikan matriks 1 yang berukuran ***(4x2)*** dengan isinya seperti diatas, matriks 2 yang berukuran ***(2x5)*** dengan isinya seperti diatas, dan matriks 3 dengan ukutan ***(4x5)*** yang merupakan matriks hasil kali matriks 1 dan 2. Kemudian deklarasi variabel a, b, c, dan line yang bertipe integer.
+- Source code diatas berfungsi untuk mendeklarasikan matriks 1 yang berukuran ***(4x2)*** dengan isinya seperti diatas, matriks 2 yang berukuran ***(2x5)*** dengan isinya seperti diatas, dan matriks 3 dengan ukutan ***(4x5)*** yang merupakan matriks hasil kali matriks 1 dan 2. Kemudian deklarasi variabel ***a, b, c,*** dan ***line*** yang bertipe integer.
 ```
 void* multiply(void* arg){
     int a = line++;
@@ -102,7 +102,7 @@ void* multiply(void* arg){
   }
 }
 ```
-- Source code diatas merupakan fungsi untuk mengalikan matriks 1 dan 2.
+- Source code diatas merupakan fungsi untuk ***mengalikan*** matriks 1 dan 2.
 ```
 int main(){
 
@@ -204,9 +204,9 @@ struct bagi{
     int row = 0;
     int mks3[4][5];
 ```
-- `typedef long long banyak` mendefinisikan variabel *banyak* bertipe *long long*.
-- Kemdian membuat variabel ***struct*** dengan nama ***bagi***, dimana di dalamnya mendeklarasikan variabel status bertipe integer dan data bertipe integer dengan ukuran 50 bit.
-- Kemudian mendeklarasikan variabel line, row, mks3 bertipe integer dan matriks 3 berukuran (4x5).
+- `typedef long long banyak` mendefinisikan variabel ***banyak*** bertipe ***long long***.
+- Kemudian membuat variabel ***bagi*** bertipe ***struct***, dimana di dalamnya mendeklarasikan variabel ***status*** bertipe integer dan ***data*** bertipe integer dengan ukuran 50 bit.
+- Kemudian mendeklarasikan variabel ***line, row, mks3*** bertipe integer dan matriks 3 berukuran (4x5).
 ```
 void* factorial(void* arg){
 	int a = *((int*)arg);
@@ -223,7 +223,7 @@ void* factorial(void* arg){
 	row++;
 }
 ```
-- Source code diatas merupakan fungsi untuk menghitung jumlah faktorial dari variabel yang ada di matriks 3.
+- Source code diatas merupakan fungsi untuk ***menghitung jumlah faktorial*** dari variabel yang ada di matriks 3.
 ```
 int main(){
 
