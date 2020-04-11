@@ -28,10 +28,14 @@ Disusun oleh :
 - [Dokumentasi Output yang Dihasilkan 4c](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#dokumentasi-penyelesaian-soal-4c)
 
 # Soal 1 - Pokezone dan Traizone
+Pokezone adalah game berbasis terminal teks mirip pokemon GO. Di game ini kita dapat mencari pokemon, mengakses pokedex, dan mengakses Shop. Kita juga dapat menangkap pokemon yang telah disediakan di game. Ayo selesaikan game ini dan bermain bersama dirimu sendiri :)!
+
+Note : Gunakan IPC Shared Memory, Thread, dan Fork-Exec!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 1](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%201)
 
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 1.
+### Ini ekspresi saya ketika melihat soalnya mas :)
 ![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/1.jpg)
 
 # Soal 2 - Tap Tap Game untuk Qiqi!
@@ -45,15 +49,14 @@ Ayo bantu Kaka untuk membuat game untuk Qiqi!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 2](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%202)
 
-## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 2.
-![]()
+## Maaf mas kamu belum bisa menyelesaikan soal ini🙏!
 
-# Soal 3 
+# Soal 3 - Program C untuk Mengkategorikan File!
+Buatlah program C untuk mengkategorikan file. Pindah file yang ekstensinya sama ke folder yang sesuai! Semisal program dijalankan, command * berfungsi untuk memindahkan semua file ke foldernya masing-masing. Silahkan download file soa3.zip dan pisahkan file didalamnya!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 3](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%203)
 
-## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 3.
-![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/3.jpg)
+## Maaf mas kamu belum bisa menyelesaikan soal ini🙏!
 
 # Soal 4 - Norland The Explorer!
 Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. 
