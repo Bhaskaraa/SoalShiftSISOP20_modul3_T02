@@ -5,56 +5,57 @@ Disusun oleh :
 - Azmi (05311840000047)
 
 # Daftar Isi
-## [Soal 1]()
+## [Soal 1](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-1---pokezone-dan-traizone)
 - [Penyelesaian Soal Pokezone]()
 - [Penyelesaian Soal Traizone]()
-- [Dokumentasi Output yang Dihasilkan]()
+- [Dokumentasi Output yang Dihasilkan](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#gambar-dibawah-ini-adalah-hasil-dari-script-penyelesaian-soal-nomor-1)
 
-## [Soal 2]()
+## [Soal 2](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-2-1)
 - [Penyelesaian Soal 2 - Client]()
 - [Penyelesaian Soal 2 - Server]()
-- [Dokumentasi Output yang Dihasilkan]()
+- [Dokumentasi Output yang Dihasilkan](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#gambar-dibawah-ini-adalah-hasil-dari-script-penyelesaian-soal-nomor-2)
 
-## [Soal 3]()
+## [Soal 3](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-3-1)
 - [Penyelesaian Soal 3]()
-- [Dokumentasi Output yang Dihasilkan]()
+- [Dokumentasi Output yang Dihasilkan](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#gambar-dibawah-ini-adalah-hasil-dari-script-penyelesaian-soal-nomor-3)
 
-## [Soal 4]()
-- [Penyelesaian Soal 4a]()
-- [Dokumentasi Output yang Dihasilkan 4a]()
-- [Penyelesaian Soal 4b]()
-- [Dokumentasi Output yang Dihasilkan 4b]()
-- [Penyelesaian Soal 4c]()
-- [Dokumentasi Output yang Dihasilkan 4c]()
+## [Soal 4](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-4---norland-the-explorer)
+- [Penyelesaian Soal 4a](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-4a---emerald-the-multiply-of-matrix)
+- [Dokumentasi Output yang Dihasilkan 4a](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#dokumentasi-penyelesaian-soal-4a)
+- [Penyelesaian Soal 4b](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-4b---amethyst-the-factorial-of-matrix)
+- [Dokumentasi Output yang Dihasilkan 4b](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#dokumentasi-penyelesaian-soal-4b)
+- [Penyelesaian Soal 4c](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#soal-4c---onyx-the-sum-of-file)
+- [Dokumentasi Output yang Dihasilkan 4c](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02#dokumentasi-penyelesaian-soal-4c)
 
 # Soal 1 - Pokezone dan Traizone
 
-File untuk penyelesaian soal ini ada disini : [Source Code Soal 1]()
+File untuk penyelesaian soal ini ada disini : [Source Code Soal 1](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%201)
 
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 1.
-![]()
+![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/1.jpg)
 
 # Soal 2  
 
-File untuk penyelesaian soal ini ada disini : [Source Code Soal 2]()
+File untuk penyelesaian soal ini ada disini : [Source Code Soal 2](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%202)
 
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 2.
 ![]()
 
 # Soal 3 
 
-File untuk penyelesaian soal ini ada disini : [Source Code Soal 3]()
+File untuk penyelesaian soal ini ada disini : [Source Code Soal 3](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%203)
 
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 3.
 ![]()
 
 # Soal 4 - Norland The Explorer!
-Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. \
+Norland adalah seorang penjelajah terkenal. Suatu malam ia menemukan tiga pilar dengan masing-masing terdapat batu dengan teka-teki sebagai berikut. 
+
 ***a.*** Emerald = buatlah matriks (4x2) dan (2x5) serta tampilkan hasil hasil perkalian matriks tersebut. \
 ***b.*** Amethyst = tampilkan matriks hasil perkalian dari batu Emerald dan buatlah matriks jumlah nilai faktorial dari setiap angka dalam matriks tersebut. \
-***c.*** Onyx = hitunglaj jumlah file yang ada dalam direktori tersebut. \
+***c.*** Onyx = hitunglah jumlah file yang ada dalam direktori tersebut. \
 
-Bantu Norland menyelesaikan teka-teki dari setiap batu pada pilar yang ia temukan!
+Bantu Norland menyelesaikan teka-teki dari setiap batu yang ia temukan!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 4](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%204)
 
@@ -165,7 +166,7 @@ int main(){
 - kn
 
 ## Dokumentasi Penyelesaian Soal 4a
-![]()
+![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4a.png)
 
 ## Soal 4b - Amethyst the Factorial of Matrix
 ```
@@ -194,7 +195,7 @@ struct bagi{
     int row = 0;
     int mks3[4][5];
 ```
--dDXA
+- dDXA
 ```
 void* factorial(void* arg){
 	int a = *((int*)arg);
@@ -272,7 +273,7 @@ int main(){
 - jb
 
 ## Dokumentasi Penyelesaian Soal 4b
-![]()
+![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4b.png)
 
 ## Soal 4c - Onyx the Sum of File
 ```
@@ -303,7 +304,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 ```
--l
+- l
 ```
     else if (p > 0){
         //selesai menulis
@@ -315,7 +316,7 @@ int main()
         execlp("ls","ls",NULL);
     }
 ```
--mk
+- mk
 ```
     else{
         //close reading
@@ -328,10 +329,10 @@ int main()
     }
 }
 ```
--klakns
+- klakns
 
 ## Dokumentasi Penyelesaian Soal 4c
-![]()
+![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/4c.png)
 
 ## Kendala yang Dialami
 ***1.*** Penulis masih menyesuaikan diri dengan sistem operasi LINUX/Ubuntu sehingga ada beberapa kendala dalam menggunakan terminal. \
