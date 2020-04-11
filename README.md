@@ -34,7 +34,14 @@ File untuk penyelesaian soal ini ada disini : [Source Code Soal 1](https://githu
 ## Gambar dibawah ini adalah hasil dari script penyelesaian soal nomor 1.
 ![](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/blob/master/Screenshot/1.jpg)
 
-# Soal 2  
+# Soal 2 - Tap Tap Game untuk Qiqi!
+Kaka ingin membuat game untuk menenangkan Qiqi. Gamenya bernama Taptap Game yang merupakan permainan berbasis text console. 
+
+Client Side : pada screen 1 aksi yang dapat dilakukan adalah Login dan Register. Pada screen 2, aksi yang dapat dilakukan adalah Find Match dan Log Out,
+
+Server Side : pada saat program pertama kali dijalankan, program akan membuat file akun.txt. Pada saat user berhasil login, akan muncul notifikasi "Auth Success", dan pada saat user meregister, program akan menampilkan list akun yang terdaftar.
+
+Ayo bantu Kaka untuk membuat game untuk Qiqi!
 
 File untuk penyelesaian soal ini ada disini : [Source Code Soal 2](https://github.com/Bhaskaraa/SoalShiftSISOP20_modul3_T02/tree/master/Soal%202)
 
@@ -155,7 +162,7 @@ int main(){
   }
 ```
 - `shmptr = (struct bagi *) shmat(shmid, NULL, 0)` shmptr menunjuk ke struct bagi dan melampirkan segmen Shared Memory.
-- `shmptr->data[a] = mks3[b][c` shmptr dipassing dengan parameter variabel a ke matriks 3.
+- `shmptr->data[a] = mks3[b][c]` shmptr dipassing dengan parameter variabel a ke matriks 3.
 ```
     shmptr->status = SIAP;
 
