@@ -39,24 +39,23 @@ void* factorial(void* arg){
 
 int main(){
 
-	key_t ShmKEY;
-	int ShmID;
-	struct bagi *ShmPTR;
+	key_t shmkey;
+	int shmid;
+	struct bagi *shmptr;
 
-	ShmKEY = ftok("key",50);
-	ShmID = shmget(ShmKEY,sizeof(struct bagi),0666);
-	if(ShmID < 0){
+	shmkey = ftok("key",50);
+	shmid = shmget(shmkey,sizeof(struct bagi),0666);
+	if(shmid < 0){
 		printf(" ERROR \n");
 		exit(1);
 	}
-
-  //Jika attachment berhasil
-	ShmPTR = (struct bagi*) shmat(ShmID, NULL, 0);
-	while (ShmPTR->status != SIAP)
+  
+	shmptr = (struct bagi*) shmat(shmid, NULL, 0);
+	while (shmptr->status != SIAP)
 	;
 
 	printf("Matriks (C) hasil perkalian A dan B adalah sebagai berikut : \n");
-		memcpy(mks3, &ShmPTR->data, 50 * sizeof(int));
+		memcpy(mks3, &shmptr->data, 50 * sizeof(int));
 		for(int b=0; b<4; b++){
 			for(int c=0; c<5; c++){
       		printf("%4d", mks3[b][c]);
@@ -73,13 +72,13 @@ int main(){
 			exit(1);
 		}
 
-		*x = ShmPTR->data[a];
+		*x = shmptr->data[a];
 		pthread_create(&(tid[a]), NULL, &factorial, x);
 		pthread_join(tid[a], NULL);
 	}
 
-	ShmPTR->status = TERAMBIL;
-	shmdt((void *) ShmPTR);
+	shmptr->status = TERAMBIL;
+	shmdt((void *) shmptr);
 	printf("\n");
 
 	return 0;
